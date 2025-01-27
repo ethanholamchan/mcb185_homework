@@ -24,4 +24,5 @@ def death_saves(race):
 			else:          return 'You are stable, but unconscious...'
 			break
 print(death_saves(''))
+print(death_saves('halfling'))
 		
