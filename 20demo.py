@@ -2,7 +2,7 @@
 
 import math
 import random
-'''
+
 # Tuples
 
 t = 1, 2
@@ -159,7 +159,7 @@ print('3D6', dnd_stats('3D6'))
 print('3D6r1', dnd_stats('3D6r1'))
 print('3D6x2', dnd_stats('3D6x2'))
 print('4D6d1', dnd_stats('4D6d1'))
-'''
+
 # Assessment Examples
 
 # 4a. change line 1.. to while i < n where n is the n where n is the number of interations
