@@ -18,7 +18,17 @@
 - Asked a question in class
 - Attended Office Hours
 ## Week 4
+- Attended Tuesday Lecture
+- Attended Office Hours
+- Introduced myself
+- Attended Thursday Lecture
+- Attended Office Hours
 ## Week 5
+- Attended Tuesday Lecture
+- Introduced myself
+- Attended a Coderie
+- Attended Thursday Lecture
+- Attended Office Hours
 ## Week 6
 ## Week 7
 ## Week 8
