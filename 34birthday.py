@@ -12,7 +12,7 @@ count = 0
 for i in range(trials):
 	calendar = [0] * days
 	for i in range(people):
-		bday = random.randint(0, 364)
+		bday = random.randint(0, days-1)
 		calendar[bday] += 1
 		if calendar[bday] == 2: 
 			count += 1
