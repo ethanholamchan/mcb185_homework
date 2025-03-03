@@ -1,5 +1,5 @@
 # Unit 3 Demo
-
+'''
 import math
 import sys
 
@@ -195,4 +195,17 @@ print(i * x)
 # X = 0: all combinatiosn
 # X = i: half matrix with diagonal
 # X = i + 1: half matrix without diagonal
+'''
+# Assessment Example
+print('-'.join(list('ABCDE'))[3:6])
 
+seq = 'ATGCTGTAA'
+position = 1
+frame = 1
+codon = ''
+for i in range(len(seq) - 2):
+	codon = seq[i:i+3]
+	print(position, '\t', frame, '\t', codon)
+	position += 1
+	if frame == 3: frame = 1
+	else:	       frame += 1

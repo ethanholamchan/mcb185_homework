@@ -18,11 +18,21 @@ sdsquare = 0
 for num in prob: sdsquare += (mean - num)**2 / len(prob)
 sd = math.sqrt(sdsquare)
 
-med = 0		#finding median
-if len(prob) % 2 == 1: med = prob[int(len(prob)/2 - .5)]
-else:		       med = (prob[len(prob)/2 - 1] + prob[len(prob)/2]) / 2
+med = 0.0		# finding median
 
+if len(prob) % 2 == 1: med = prob[int(len(prob)/2 - .5)]
+else:		       med = prob[int(len(prob)/2 - 1)] + prob[int(len(prob)/2)] / 2
+
+n50 = 0		# finding N50
+score = 0
+for num in prob:
+	n50 += num
+	if n50 >= (total/2): 
+		score = num
+		break
+	
 print('You listed ', len(prob), 'values')
 print('max: ', maximum, ' min: ', minimum)
 print('mean: ', mean, ' sd: ', f'{sd:.4}')
 print('median: ', med)
+print('n50: ', score)
