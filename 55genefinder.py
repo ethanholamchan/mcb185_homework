@@ -20,7 +20,7 @@ def find_orfs(seq, strand, offset):
 				else:		  orfs.append((len(seq)-i, len(seq)-start, "-"))
 			start = -1
 	return orfs
-'''
+
 for dl, seq in mcb185.read_fasta(sys.argv[1]):
 	rev_seq = mcb185.anti_seq(seq)
 	orfs = []
@@ -31,7 +31,7 @@ for dl, seq in mcb185.read_fasta(sys.argv[1]):
 	for start, end, strand in orfs: 
 		print(f"{dl}\tgene_finder\tCDS\t{start}\t{end}\t{strand}")
 
-'''
+
 rand_genome = ''.join(random.choices('ACGT', k=1000000))
 
 rev_rand = mcb185.anti_seq(rand_genome)
