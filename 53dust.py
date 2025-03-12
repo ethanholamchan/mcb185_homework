@@ -10,7 +10,8 @@ def findent(counts, total):
 	
 parser = argparse.ArgumentParser(description='DNA entropy filter.')
 parser.add_argument('file', type=str, help='name of fasta file')
-parser.add_argument('-s', '--size', type=int, default=20, help='window size [%(default)i]')
+parser.add_argument('-s', '--size', type=int, default=20, 
+	help='window size [%(default)i]')
 parser.add_argument('-e', '--entropy', type=float, default=1.4, 
 	help='entropy threshold [%(default).3f]')
 parser.add_argument('--lower', action='store_true', help='soft mask')
@@ -30,5 +31,6 @@ for dl, seq in mcb185.read_fasta(arg.file):
 		entropy = findent(count, arg.size)
 		if entropy < arg.entropy:
 			for j in range(i, i + arg.size):
-				mask[j] = 'N'
+				if arg.lower: mask[j] = mask[j].lower()
+				else:         mask[j] = 'N'
 	print(''.join(mask))
